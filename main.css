@@ -1,0 +1,110 @@
+:root {
+  --green-principal: #006C00;
+  --green-secondary: #008000;
+  --yellow-green: #88AA00;
+  --grey: #ECECEC;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Modifying container */
+.container {
+  max-width: 880px;
+}
+
+/* Header radio */
+.header.radio {
+  background-color: #f8f8f8;
+  padding: 1rem 0;
+}
+
+.img-logo {
+  width: 200px;
+}
+
+.sm-container .row {
+  padding: 0 12px 0 15px;
+}
+
+.sm-container .row .col {
+  padding: 0 3px;
+}
+
+/* Circles */
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/* Play BTN */
+.playRadio {
+  width: 50px;
+  height: 50px;
+  background-color: var(--green-secondary);
+  margin-right: .3rem;
+}
+
+.playIcon {
+  width: 25px;
+  color: #ffffff;
+}
+
+.plaRadioTXT {
+  font-size: 12px;
+}
+
+/* Contact in header */
+.headerContact {
+  font-size: 12px;
+}
+
+.t-green {
+  color: var(--green-secondary);
+}
+
+/* Social icons */
+.sn {
+  width: 25px;
+  height: 25px;
+}
+
+.snLgo {
+  width: 12px;
+}
+
+.sn.fb {
+  background-color: #4267B2;
+}
+
+.sn.tt {
+  background-color: #1DA1F2;
+}
+
+.sn.yt {
+  background-color: #FF0000;
+}
+
+/* Navbar */
+.navbar.radio {
+  background-color: var(--green-secondary);
+}
+
+.navRadio {
+  color: #ffffff;
+}
+
+.navRadio.active {
+  background-color: var(--green-principal) !important;
+}
+
+.navbar.radio .container .nav-pills a {
+  font-size: 15px;
+}
+
+.navbar.radio .container .nav-pills a:hover {
+  color: #ffffff;
+}
