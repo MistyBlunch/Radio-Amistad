@@ -10,45 +10,43 @@
   <title>Radio Amistad</title>
 </head> 
 <body>
-  <section class="header radio">
+  <header class="header radio">
     <div class="container">
-      <div class="row d-flex justify-content-between">
+      <div class="row d-flex justify-content-between  align-items-center">
         <div class="col-sm-auto d-flex align-items-center justify-content-center">
           <img class="img-logo" src="imgs/radio_amistad.svg" alt="radio amistad logo">
         </div>
         <div class="col-sm-auto d-flex align-items-center justify-content-center">
-          <div class="circle playRadio">
-            <img class="playIcon" src="imgs/playbtn.svg">
-          </div>
+          <a href="#">
+            <div class="circle playRadio">
+              <img class="playIcon" src="imgs/playbtn.svg">
+            </div>
+          </a>
           <h6 class="plaRadioTXT font-weight-bold m-0">Escuchanos <br> EN VIVO</h6>
         </div>
         <div class="col-sm-auto d-flex align-items-center dm-none">
           <h6 class="headerContact m-0">Llamanos a nuestra cabina <span class="t-green">+51 2461117</span></h6>
         </div>
-        <div class="sm-container col-sm-auto d-flex align-items-center dm-none">
-          <div class="row">
-            <div class="col">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <div class="circle sn fb">
-                  <img class="snLgo" src="imgs/facebook-logo.svg">
-                </div>
-              </a>
+        <div class="sm-container col-sm-auto d-flex align-items-center dm-none justify-content-center">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <div class="circle sn fb">
+              <img class="snLgo" src="imgs/facebook-logo.svg">
             </div>
-            <div class="col">
-              <div class="circle sn tt">
-                <img class="snLgo" src="imgs/twitter.svg">
-              </div>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <div class="circle sn tt">
+              <img class="snLgo" src="imgs/twitter.svg">
             </div>
-            <div class="col">
-              <div class="circle sn yt">
-                <img class="snLgo" src="imgs/youtube-logo.svg">
-              </div>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <div class="circle sn yt">
+              <img class="snLgo" src="imgs/youtube-logo.svg">
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
-  </section>
+  </header>
   <section class="navbar radio p-0">
     <div class="container">
       <nav class="nav nav-pills flex-column flex-sm-row">
@@ -57,9 +55,141 @@
       </nav>
     </div>
   </section>
-
+  <section class="newsCarousel radio">
+    <div class="container">
+      <div id="carouselNewsInfo" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://picsum.photos/400/200" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <div class="newsTag">
+                <h6 class="font-weight-bold m-0">Internacional</h6>
+              </div>
+              <h5 class="font-weight-bold">Las cenizas de Camilo Sesto ya tienen dónde reposar: su Alcoy natal</h5>
+              <p>El hijo del cantante, Camilo ha confirmado que este juevesse celebrará un homenaje en la misma localidad alcantina.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/400/200" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <div class="newsTag">
+                <h6 class="font-weight-bold m-0">Internacional</h6>
+              </div>
+              <h5 class="font-weight-bold">Second slide label</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/400/200" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <div class="newsTag">
+                <h6 class="font-weight-bold m-0">Internacional</h6>
+              </div>
+              <h5 class="font-weight-bold">Third slide label</h5>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselNewsInfo" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselNewsInfo" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="lastNews radio d-flex">
+    <div class="container">
+      <div class="row">
+        <div class="newsHeader col d-flex justify-content-between align-items-center">
+          <h4 class="font-weight-bold text-white m-0">LO ÚLTIMO</h4>
+          <a href="#"><button class="lastNewsBtn text-white">Ver más noticias</button></a>
+        </div>
+      </div>
+      <div id="lastNewsCarousel" class="carousel slide">
+        <ol class="carousel-indicators">
+          <li data-target="#lastNewsCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#lastNewsCarousel" data-slide-to="1"></li>
+          <li data-target="#lastNewsCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row newImgs">
+              <div class="col">
+                <figure class="figure">
+                  <img src="https://picsum.photos/150/150" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption text-body">Rage Against the Machine juntos otra vez.</figcaption>
+                </figure>
+              </div>
+              <div class="col">
+                <figure class="figure">
+                  <img src="https://picsum.photos/150/150" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption text-body">Rage Against the Machine juntos otra vez.</figcaption>
+                </figure>
+              </div>
+              <div class="col d-none d-sm-block">
+                <figure class="figure">
+                  <img src="https://picsum.photos/150/150" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption text-body">Rage Against the Machine juntos otra vez.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row newImgs">
+              <div class="col">
+                <figure class="figure">
+                  <img src="https://picsum.photos/150/150" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption text-body">Rage Against the Machine juntos otra vez.</figcaption>
+                </figure>
+              </div>
+              <div class="col">
+                <figure class="figure">
+                  <img src="https://picsum.photos/150/150" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption text-body">Rage Against the Machine juntos otra vez.</figcaption>
+                </figure>
+              </div>
+              <div class="col d-none d-sm-block">
+                <figure class="figure">
+                  <img src="https://picsum.photos/150/150" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption text-body">Rage Against the Machine juntos otra vez.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row newImgs">
+              <div class="col">
+                <figure class="figure">
+                  <img src="https://picsum.photos/150/150" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption text-body">Rage Against the Machine juntos otra vez.</figcaption>
+                </figure>
+              </div>
+              <div class="col">
+                <figure class="figure">
+                  <img src="https://picsum.photos/150/150" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption text-body">Rage Against the Machine juntos otra vez.</figcaption>
+                </figure>
+              </div>
+              <div class="col d-none d-sm-block">
+                <figure class="figure">
+                  <img src="https://picsum.photos/150/150" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption text-body">Rage Against the Machine juntos otra vez.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&autoLogAppEvents=1&version=v5.0&appId=2393412124225675"></script>
 </body>
 </html>

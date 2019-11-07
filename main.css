@@ -11,7 +11,7 @@ html, body {
 
 /* Modifying container */
 .container {
-  max-width: 880px;
+  max-width: 780px;
 }
 
 /* Header radio */
@@ -24,11 +24,7 @@ html, body {
   width: 200px;
 }
 
-.sm-container .row {
-  padding: 0 12px 0 15px;
-}
-
-.sm-container .row .col {
+.sm-container a {
   padding: 0 3px;
 }
 
@@ -108,3 +104,117 @@ html, body {
 .navbar.radio .container .nav-pills a:hover {
   color: #ffffff;
 }
+
+
+/* Carousel News */
+.newsCarousel.radio {
+  padding: 2rem 0;
+}
+
+#carouselNewsInfo {
+  border-bottom: 5px solid var(--green-principal);
+}
+
+.carousel.slide a {
+  background-color: #000000;
+  padding: .5rem;
+}
+
+.carousel.slide .carousel-control-prev {
+  right: 42px;
+  left: auto;
+}
+
+.carousel.slide .carousel-control-next, .carousel-control-prev {
+  align-items: flex-start;
+  width: auto;
+  bottom: auto;
+  opacity: 1;
+}
+
+.carousel.slide a:hover, .carousel.slide a:active {
+  background-color: var(--green-principal);
+}
+
+.carousel.slide .carousel-control-prev-icon {
+  background-image: url('imgs/back.svg');
+}
+
+.carousel.slide .carousel-control-next-icon {
+  background-image: url('imgs/next.svg');
+}
+
+#carouselNewsInfo .carousel-caption {
+  background-color: #000000;
+  padding: 30px 1rem 1rem;
+  opacity: 0.8;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+}
+
+#carouselNewsInfo .carousel-caption p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+#carouselNewsInfo .newsTag {
+  background-color: #1DA1F2;
+  position: absolute;
+  top: -12px;
+  padding: .4rem .6rem;
+}
+
+#carouselNewsInfo .newsTag h6 {
+  color: #ffffff;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+
+/* Lo Nuevo Noticias */
+.lastNews.radio {
+  background-color: var(--green-principal);
+  padding: 2rem 0 0;
+  margin-bottom: 8rem;
+}
+
+.lastNews.radio .newsHeader {
+  margin-bottom: 1.5rem;
+}
+
+.lastNews.radio .newsHeader .lastNewsBtn {
+  background-color: var(--yellow-green);
+  border: none;
+  padding: .6rem 1rem;
+  border-radius: 25px;
+  font-size: 14px;
+}
+
+.lastNews.radio .container{
+  margin-bottom: -7rem;
+}
+
+.lastNews.radio .newImgs .col img{
+  width: 100%;
+  border: 3px solid #ffffff;
+  border-radius: 0 !important;
+}
+
+.lastNews.radio #lastNewsCarousel {
+  padding-bottom: 1rem;
+}
+
+.lastNews.radio #lastNewsCarousel .carousel-indicators{
+  margin-bottom: 0;
+}
+
+.lastNews.radio #lastNewsCarousel li{
+  width: 15px;
+  height: 15px;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--green-secondary);
+}
+
