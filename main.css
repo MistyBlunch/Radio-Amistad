@@ -297,8 +297,9 @@ footer h6 {
 
 .radioTitle .title {
   color: var(--green-principal);
-  font-size: 16px;
+  font-size: 15px;
   margin: 0 .8rem 0 0;
+  white-space: nowrap;
 }
 
 .radioTitle .bar {
@@ -316,16 +317,37 @@ footer h6 {
 
 /* Media queries */
 @media (max-width: 992px) {
-  .trendingTopics.radio .social .col-8 {
+  .radio .social .col-8 {
     flex: 3;
     max-width: 100%;
   }
 
-  .trendingTopics.radio .social .socialItems {
+  .radio .social .socialItems {
     width: 230px;
   }
 }
 
+/*************** BLOG PAGE  **************/
+.blogNews  .newsSection { 
+  margin-top: 2.5rem;
+}
+
+.newsContainer .col:first-child {
+  padding-right: 5px;
+}
+
+.newsContainer .col:last-child {
+  padding-left: 5px;
+}
+
+.blogNews .newTitle {
+  color: var(--green-principal);
+  font-size: 16px;
+}
+
+.blogNews  .newText {
+  font-size: 10px;
+}
 
 @media (max-width: 768px)  {
   .img-logo {
@@ -345,12 +367,12 @@ footer h6 {
     font-size: 12px;
   }
 
-  .trendingTopics.radio .social {
+  .radio .social {
     display: flex;
     flex-direction: column;
   }
 
-  .trendingTopics.radio .social .col {
+  .radio .social .sidebar {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -454,5 +476,12 @@ footer h6 {
 
   .radioTitle .bar {
     width: 65%;
+  }
+}
+
+@media (max-width: 406px) {
+  .row.newsContainer {
+    display: flex;
+    flex-direction: column;
   }
 }
