@@ -275,15 +275,53 @@ html, body {
 }
 
 
+/* Footer */
+footer {
+  background-color: var(--grey);
+  padding: 1.5rem 1rem;
+}
+
+footer .col {
+  margin: .3rem 0;
+}
+
+footer h6 {
+  font-size: 12px;
+}
+
+/*************** RADIO PAGE **************/
+/* Radio header */
+.radioTitle {
+  padding: 1.8rem 0;
+}
+
+.radioTitle .title {
+  color: var(--green-principal);
+  font-size: 16px;
+  margin: 0 .8rem 0 0;
+}
+
+.radioTitle .bar {
+  background-color: var(--green-principal);
+  width: 80%;
+  height: .5rem;
+}
+
+/* Radio online section */
+.radioOnline .radioTextInfo {
+  font-size: 14px;
+  color: var(--green-principal);
+}
+
 
 /* Media queries */
 @media (max-width: 992px) {
-  .social .col-8 {
+  .trendingTopics.radio .social .col-8 {
     flex: 3;
     max-width: 100%;
   }
 
-  .social .socialItems {
+  .trendingTopics.radio .social .socialItems {
     width: 230px;
   }
 }
@@ -307,23 +345,23 @@ html, body {
     font-size: 12px;
   }
 
-  .social {
+  .trendingTopics.radio .social {
     display: flex;
     flex-direction: column;
   }
 
-  .social .col {
+  .trendingTopics.radio .social .col {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .radioTitle.radio.view .title {
+  .radioTitle .title {
     font-size: 13px;
   }
 
-  .radioTitle.radio.view .bar {
+  .radioTitle .bar {
     height: .3rem;
   }
 }
@@ -400,5 +438,21 @@ html, body {
 
   #carouselTrending .carousel-item .carousel-caption h5 {
     font-size: 16px;
+  }
+
+  footer {
+    padding: 1.5rem 1rem;
+  }
+
+  footer h6 {
+    font-size: 10px;
+  }
+
+  .radioTitle .title {
+    font-size: 12px;
+  }
+
+  .radioTitle .bar {
+    width: 65%;
   }
 }
