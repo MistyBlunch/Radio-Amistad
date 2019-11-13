@@ -39,20 +39,140 @@ html, body {
 }
 
 /* Play BTN */
-.playRadio {
+.controlsRadio {
   width: 50px;
   height: 50px;
   background-color: var(--green-secondary);
   margin-right: .3rem;
 }
 
-.playIcon {
+.inRadio .controlsRadio {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1.5rem;
+}
+
+.inRadio .controlsRadio img {
+  width: 40px;
+}
+
+.controlImgRadio {
   width: 25px;
   color: #ffffff;
 }
 
 .plaRadioTXT {
   font-size: 12px;
+}
+
+.inRadio .plaRadioTXT {
+  font-size: 18px;
+}
+
+.inRadio h6 {
+  margin-bottom: 1rem !important;
+}
+
+.inRadio input[type=range] {
+  -webkit-appearance: none; 
+  width: 100%; 
+  background: transparent; 
+}
+
+.inRadio input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 8px;
+  width: 10px;
+  border-radius: 1px;
+  background: var(--green-principal);
+  cursor: pointer;
+  margin-top: 0px;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 8px;
+  width: 10px;
+  border-radius: 1px;
+  background: var(--green-principal);
+  cursor: pointer;
+  margin-top: 0px;
+}
+
+input[type=range]::-ms-thumb {
+  height: 8px;
+  width: 10px;
+  border-radius: 1px;
+  background: var(--green-principal);
+  cursor: pointer;
+  margin-top: 0px; 
+}
+
+/* slide */
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: var(--yellow-green);
+  border-radius: 4px;
+}
+
+#volumenRange {
+  width: 64.5px;
+  height: 8px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0;
+  margin-left: 0;
+  content: '';
+  background-color: var(--green-principal);
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: var(--yellow-green);
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: var(--yellow-green);
+  border-radius: 4px;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: var(--yellow-green);
+  border-radius: 4px;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: var(--yellow-green);
+  border-radius: 4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: var(--yellow-green);
+}
+input[type=range]::-ms-fill-upper {
+  background: var(--yellow-green);
+  border-radius: 4px;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: var(--yellow-green);
+}
+
+input[type=range]:focus {
+  outline: none; 
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
 }
 
 /* Contact in header */
@@ -227,7 +347,7 @@ html, body {
   text-transform: uppercase;
 }
 
-#carouselTrending .carousel-caption {
+.titleCaption {
   position: relative;
   margin: 1rem 0;
   padding: 0 .6rem;
@@ -289,10 +409,20 @@ footer h6 {
   font-size: 12px;
 }
 
+/* Radio Player */
+#radioPlayer {
+  width: 100%;
+  height: auto;
+  background-color: var(--grey);
+  padding: 1rem 3rem;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+}
+
 /*************** RADIO PAGE **************/
 /* Radio header */
 .radioTitle {
-  padding: 1.8rem 0;
+  padding: 1rem 0;
 }
 
 .radioTitle .title {
@@ -304,7 +434,7 @@ footer h6 {
 
 .radioTitle .bar {
   background-color: var(--green-principal);
-  width: 80%;
+  width: 100%;
   height: .5rem;
 }
 
@@ -315,21 +445,23 @@ footer h6 {
 }
 
 
-/* Media queries */
-@media (max-width: 992px) {
-  .radio .social .col-8 {
-    flex: 3;
-    max-width: 100%;
-  }
-
-  .radio .social .socialItems {
-    width: 230px;
-  }
-}
 
 /*************** BLOG PAGE  **************/
-.blogNews  .newsSection { 
-  margin-top: 2.5rem;
+.blogNews.radio {
+  padding-top: 1.5rem;
+}
+
+.blogNews .newsSection { 
+  margin-top: 1.5rem;
+}
+
+.newsContainer {
+  margin-bottom: 1.5rem;
+}
+
+.newsContainer figure, .newsContainer img {
+  width: 100%;
+  margin: 0;
 }
 
 .newsContainer .col:first-child {
@@ -345,8 +477,28 @@ footer h6 {
   font-size: 16px;
 }
 
-.blogNews  .newText {
+.blogNews .newText {
   font-size: 10px;
+}
+
+.sidebarVideo {
+  width: 230px;
+}
+
+.sidebarVideo .titleCaption h5 {
+  font-size: 16px;
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+  .radio .social .col-8 {
+    flex: 3;
+    max-width: 100%;
+  }
+
+  .radio .social .socialItems {
+    width: 230px;
+  }
 }
 
 @media (max-width: 768px)  {
@@ -358,7 +510,7 @@ footer h6 {
     margin-bottom: 10px;
   }
 
-  .playRadio {
+  .controlsRadio {
     width: 45px;
     height: 43px;
   }
@@ -385,6 +537,28 @@ footer h6 {
 
   .radioTitle .bar {
     height: .3rem;
+  }
+
+  .newsContainer .newsDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .titleCaption h5 {
+    font-size: 17px;
+  }
+ 
+  .row.newsContainer, .col.radioTitle {
+    padding: 0 5%;
+  }
+
+  .row.newsContainer .figure {
+    margin-bottom: .5rem;
+  }
+
+  .radioTitle .col{
+    padding: 0 5%;
   }
 }
 
@@ -474,14 +648,15 @@ footer h6 {
     font-size: 12px;
   }
 
-  .radioTitle .bar {
-    width: 65%;
-  }
-}
-
-@media (max-width: 406px) {
   .row.newsContainer {
     display: flex;
     flex-direction: column;
+  }
+  .newsContainer .col:first-child, .newsContainer .col:last-child {
+    padding: 0;
+  }
+
+  #radioPlayer {
+    padding: 1rem 2rem;
   }
 }
