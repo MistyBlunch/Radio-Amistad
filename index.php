@@ -1,4 +1,8 @@
-  <?php get_header(); ?>
+  <?php 
+  get_header(); 
+  
+  $sliders = getSliderActual();
+  ?>
   <section class="navbar radio p-0">
     <div class="container">
       <nav class="nav nav-pills flex-column flex-sm-row">
@@ -11,36 +15,22 @@
     <div class="container">
       <div id="carouselNewsInfo" class="carousel slide">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://picsum.photos/400/200" class="d-block w-100" alt="...">
-            <div class="carousel-caption">
-              <div class="newsTag">
-                <h6 class="font-weight-bold m-0">Internacional</h6>
+          
+          <?php foreach($sliders as $slider) : ?>
+            <div class="carousel-item <?php echo $slider['current']; ?>">
+              <?php if(!empty($slider['image_full'])):?>
+                <img src="<?php echo $slider['image_full'][0] ?>" class="d-block w-100" alt="...">
+              <?php endif ?>
+              <div class="carousel-caption">
+                <div class="newsTag">
+                  <h6 class="font-weight-bold m-0"><?php echo $slider['category']; ?></h6>
+                </div>
+                <h5 class="font-weight-bold"><?php echo $slider['title']; ?></h5>
+                <?php echo $slider['description']; ?>
               </div>
-              <h5 class="font-weight-bold">Las cenizas de Camilo Sesto ya tienen dónde reposar: su Alcoy natal</h5>
-              <p>El hijo del cantante, Camilo ha confirmado que este juevesse celebrará un homenaje en la misma localidad alcantina.</p>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://picsum.photos/400/200" class="d-block w-100" alt="...">
-            <div class="carousel-caption">
-              <div class="newsTag">
-                <h6 class="font-weight-bold m-0">Internacional</h6>
-              </div>
-              <h5 class="font-weight-bold">Second slide label</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://picsum.photos/400/200" class="d-block w-100" alt="...">
-            <div class="carousel-caption">
-              <div class="newsTag">
-                <h6 class="font-weight-bold m-0">Internacional</h6>
-              </div>
-              <h5 class="font-weight-bold">Third slide label</h5>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </div>
-          </div>
+          <?php endforeach ?>
+
         </div>
         <a class="carousel-control-prev" href="#carouselNewsInfo" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
