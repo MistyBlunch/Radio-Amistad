@@ -11,6 +11,17 @@
 
   add_action('wp_enqueue_scripts', 'friendship_load_script');
 
+  register_sidebar(
+    array(
+        'name'          => esc_html__( 'Sidebar', 'friendship' ),
+        'id'            => 'sidebar',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s ">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    )
+  );
+
   function getSliderActual(){
     //Argumentos sirve para hacer consultas.
     $args = array(
