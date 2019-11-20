@@ -46,3 +46,11 @@
       </div>
     </div>
   </header>
+  <section class="navbar radio p-0">
+    <div class="container">
+      <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="rounded-0 font-weight-bold flex-sm-fill text-sm-center navRadio nav-link active" href="#">HOME</a>
+        <a class="rounded-0 font-weight-bold flex-sm-fill text-sm-center navRadio nav-link" href="#">NOTICIAS</a>
+      </nav>
+    </div>
+  </section>

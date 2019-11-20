@@ -11,8 +11,6 @@
 
   add_action('wp_enqueue_scripts', 'friendship_load_script');
 
-  /* Averiguar eventos(hooks) Wordpress */
-
   function getSliderActual(){
     //Argumentos sirve para hacer consultas.
     $args = array(
@@ -38,6 +36,7 @@
       $tmp['title'] = $item->post_title;
       $tmp['description'] = $item->post_excerpt;
       $tmp['contenido'] = $item->post_content;
+      $tmp['url'] = get_permalink($item->ID);
       $imageID = get_post_thumbnail_id($item->ID);
       $tmp['image_full'] = wp_get_attachment_image_src($imageID,'full');
       $category = get_the_terms($item->ID,['category']);
@@ -55,4 +54,71 @@
   }
 
 
-?>
+  function getSliderNoticias(){
+    $args = array(
+      'post_type' => 'post',
+      'post_per_page' => 3,
+      'orderby' => 'ASC',
+      'category_name' => 'noticias'
+    );
+
+    $row = new WP_Query($args);
+    $data = $row->get_posts();
+    $tmp = [];
+    $list = [];
+
+    foreach($data as $item){
+      $counter++;
+      $tmp['id'] = $item->ID;
+      $tmp['author'] = $item->post_author;
+      $tmp['date'] = $item->post_date;
+      $tmp['title'] = $item->post_title;
+      $tmp['description'] = $item->post_excerpt;
+      $tmp['contenido'] = $item->post_content;
+      $imageID = get_post_thumbnail_id($item->ID);
+      $tmp['image_full'] = wp_get_attachment_image_src($imageID,'full');
+      $category = get_the_terms($item->ID,['category']);
+      $categoryName = $category[0]->name;
+      $tmp['category'] = $categoryName;
+      $list[] = $tmp;
+    }
+    return $list;
+  }
+
+  function getSliderTendencias(){
+    $args = array(
+      'post_type' => 'post',
+      'post_per_page' => 3,
+      'orderby' => 'ASC',
+      'category_name' => 'tendencias'
+    );
+
+    $row = new WP_Query($args);
+    $data = $row->get_posts();
+    $tmp = [];
+    $list = [];
+    $counter = 0;
+
+    foreach($data as $item){
+      $counter++;
+      $tmp['id'] = $item->ID;
+      $tmp['author'] = $item->post_author;
+      $tmp['date'] = $item->post_date;
+      $tmp['title'] = $item->post_title;
+      $tmp['description'] = $item->post_excerpt;
+      $tmp['contenido'] = $item->post_content;
+      $imageID = get_post_thumbnail_id($item->ID);
+      $tmp['image_full'] = wp_get_attachment_image_src($imageID,'full');
+      $category = get_the_terms($item->ID,['category']);
+      $categoryName = $category[0]->name;
+      $tmp['category'] = $categoryName;
+      $tmp['current'] = null;
+      if($counter==1){
+        $tmp['current'] = 'active';
+      }
+      $list[] = $tmp;
+    }
+    return $list;
+  }
+
+?>    
