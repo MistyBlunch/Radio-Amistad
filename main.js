@@ -1,5 +1,6 @@
+console.log('ola')
 let radioPlayerContainer = document.getElementById('radioPlayer')
-let controlRadio = document.getElementById('contolRadio')
+let controlRadio = document.getElementById('controlImgRadio')
 let volume = document.getElementById('volume')
 let volumeRange = document.getElementById('volumenRange')
 
@@ -17,11 +18,11 @@ volume.addEventListener('click', function vol() {
 radioPlayerContainer.appendChild(audioElement)
 
 function playpauseRadio() {
-  if (controlRadio.src === 'http://127.0.0.1:5500/imgs/playbtn.svg') {
+  if (controlRadio.src === 'http://localhost/wordpress/wp-content/themes/Radio-Amistad/imgs/playbtn.svg') {
     audioElement.play()
-    controlRadio.src = 'http://127.0.0.1:5500/imgs/pausebtn.svg'
+    controlRadio.src = 'http://localhost/wordpress/wp-content/themes/Radio-Amistad/imgs/pausebtn.svg'
   } else {
     audioElement.pause()
-    controlRadio.src = 'http://127.0.0.1:5500/imgs/playbtn.svg'
+    controlRadio.src = 'http://localhost/wordpress/wp-content/themes/Radio-Amistad/imgs/playbtn.svg'
   }
 }

@@ -2,10 +2,18 @@
   //Permite habilitar al theme subir imagen destacada
   add_theme_support('post-thumbnails');
 
+  // Include custom navwalker
+  require_once('lib/bs4navwalker/bs4navwalker.php');
+
+  // Register WordPress nav menu
+  register_nav_menu('top', 'Menu Principal');
+
   function friendship_load_script() {
     wp_enqueue_style('bootstrap-css', get_template_directory_uri() .'/lib/bootstrap/css/bootstrap.min.css', '', 'v4.3');
+    wp_enqueue_style('bootstrap-css', get_template_directory_uri() .'/lib/owlcarousel/dist/assets/owlcarousel.min.css', '', 'v4.3');
     wp_enqueue_style('friendship_style', get_stylesheet_uri());
     wp_enqueue_script('jquery');
+    wp_enqueue_script('friendaship_js', get_template_directory_uri() .'/main.js', array(), '', true);
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/lib/bootstrap/js/bootstrap.min.js', array(), 'v4.3', true);
   }
 
@@ -84,6 +92,7 @@
       $tmp['author'] = $item->post_author;
       $tmp['date'] = $item->post_date;
       $tmp['title'] = $item->post_title;
+      $tmp['url'] = get_permalink($item->ID);
       $tmp['description'] = $item->post_excerpt;
       $tmp['contenido'] = $item->post_content;
       $imageID = get_post_thumbnail_id($item->ID);
@@ -116,6 +125,7 @@
       $tmp['author'] = $item->post_author;
       $tmp['date'] = $item->post_date;
       $tmp['title'] = $item->post_title;
+      $tmp['url'] = get_permalink($item->ID);
       $tmp['description'] = $item->post_excerpt;
       $tmp['contenido'] = $item->post_content;
       $imageID = get_post_thumbnail_id($item->ID);

@@ -23,6 +23,14 @@ html, body {
   max-width: 780px;
 }
 
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 
 /*************** INDEX **************/
 /* Header radio */
@@ -224,15 +232,21 @@ input[type=range]::-ms-track {
   color: #ffffff;
 }
 
-.navRadio.active {
+.radioNav .active {
   background-color: var(--green-principal) !important;
 }
 
-.navbar.radio .container .nav-pills a {
-  font-size: 15px;
+.navbar.radio .container .radioNav {
+  padding: 0;
 }
 
-.navbar.radio .container .nav-pills a:hover {
+.navbar.radio .container .radioNav a {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.navbar.radio .container .radioNav a:hover {
   color: #ffffff;
 }
 
@@ -246,24 +260,23 @@ input[type=range]::-ms-track {
   border-bottom: 5px solid var(--green-principal);
 }
 
-.carousel.slide a {
-  background-color: #000000;
-  padding: .5rem;
-}
 
 .carousel.slide .carousel-control-prev {
   right: 42px;
   left: auto;
 }
 
-.carousel.slide .carousel-control-next, .carousel-control-prev {
+.carousel.slide .car-controls-icons {
+  background-color: #000000;
+  padding: .5rem;
   align-items: flex-start;
   width: auto;
   bottom: auto;
   opacity: 1;
+  z-index: 100;
 }
 
-.carousel.slide a:hover, .carousel.slide a:active {
+.carousel.slide .carousel-control-prev:hover, .carousel.slide .carousel-control-prev:active {
   background-color: var(--green-principal);
 }
 
@@ -285,7 +298,7 @@ input[type=range]::-ms-track {
   text-align: left;
 }
 
-#carouselNewsInfo .carousel-caption p {
+#carouselNewsInfo .carousel-caption .newsDesc {
   margin-bottom: 0;
   font-size: 14px;
 }
@@ -308,7 +321,7 @@ input[type=range]::-ms-track {
 .lastNews.radio {
   background-color: var(--green-principal);
   padding: 2rem 0 0;
-  margin-bottom: 8rem;
+  margin-bottom: 10rem;
 }
 
 .lastNews.radio .newsHeader {
@@ -454,7 +467,9 @@ footer h6 {
   color: var(--green-principal);
 }
 
-
+.radioOnline .container .col.sidebar div {
+  width: 100%;
+}
 
 /*************** BLOG PAGE  **************/
 .blogNews.radio {
@@ -472,6 +487,7 @@ footer h6 {
 .newsContainer figure, .newsContainer img {
   width: 100%;
   margin: 0;
+  height: 10rem;
 }
 
 .newsContainer .col:first-child {
@@ -484,19 +500,95 @@ footer h6 {
 
 .blogNews .newTitle {
   color: var(--green-principal);
-  font-size: 16px;
+  font-size: 15px;
 }
 
-.blogNews .newText {
+.newsDescription p {
   font-size: 10px;
 }
 
-.sidebarVideo {
+.blogNews .sidebarVideo {
   width: 230px;
 }
 
-.sidebarVideo .titleCaption h5 {
-  font-size: 16px;
+.blogNews .sidebarVideo .titleCaption h5 {
+  font-size: 15px;
+}
+
+.blogNews .sidebarVideo .carousel-item img {
+  height: 150px;
+}
+
+/* SINGLE PAGE */
+.newPost {
+  padding-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.newPost .container .col.aside .postImg {
+  position: relative;
+}
+
+.newPost .container .sidebar .widget-title {
+  font-size: 1rem;
+}
+
+.newPost .container .sidebar aside ul li {
+  font-size: 12px;
+}
+
+.col.aside img {
+  width: 100%;
+  height: 30%;
+  margin-bottom: 1rem;
+}
+
+.col.aside .postImg .postDate {
+  padding: .1rem .3rem;
+  background-color: var(--green-secondary);
+  color: #ffffff;
+  margin: .1rem 0 1rem;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+/* Sidebar */
+.sidebar {
+  width: 100%;
+}
+
+.sidebar aside input[type="text"] {
+  width: 100%;
+  border-style: ridge;
+  border-radius: 4px;
+  margin-bottom: .5rem;
+}
+
+.sidebar aside input[type="submit"] {
+  background-color: transparent;
+  background-color: var(--green-secondary);
+  color: #ffffff;
+  border: transparent;
+  border-radius: 4px;
+}
+
+.sidebar aside {
+  margin-bottom: 1rem;
+}
+
+.col aside .widget-title {
+  font-size: 18px;
+}
+
+.col aside ul {
+  padding-left: 1.7rem;
+}
+
+.col aside ul a {
+  font-size: 14px;
 }
 
 /* Media queries */
@@ -559,6 +651,19 @@ footer h6 {
     font-size: 17px;
   }
  
+  .lastNews.radio .container {
+    margin-bottom: -11.5rem;
+  }
+
+  .lastNews.radio .newImgs .col img{
+    width: 100%;
+    height: 175px;
+  }
+
+  .lastNews.radio {
+    margin-bottom: 12rem;
+  }
+
   .row.newsContainer, .col.radioTitle {
     padding: 0 5%;
   }
@@ -569,6 +674,19 @@ footer h6 {
 
   .radioTitle .col{
     padding: 0 5%;
+  }
+
+  .radio .social .col-8 {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .blogNews .newTitle {
+    font-size: 13px;
+  }
+
+  .radioOnline .container .col.sidebar div {
+    width: 230px;
   }
 }
 
@@ -589,11 +707,10 @@ footer h6 {
 
   .newsCarousel.radio {
     padding: 1.5rem 0;
-
   }
 
   #carouselNewsInfo .carousel-caption {
-    padding: 15px .5rem .3rem;
+    padding: 20px .5rem .3rem;
   }
 
   #carouselNewsInfo .newsTag h6 {
@@ -601,10 +718,11 @@ footer h6 {
   }
 
   #carouselNewsInfo .carousel-caption h5 {
-    font-size: 15px;
+    font-size: 12px;
+    margin-bottom: 0;
   }
 
-  #carouselNewsInfo .carousel-caption p {
+  #carouselNewsInfo .carousel-caption .newsDesc {
     font-size: 10px;
   }
 
@@ -612,12 +730,24 @@ footer h6 {
     right: 36px;
   }
 
-  #carouselNewsInfo a {
-    padding: .3rem;
-  }
-
   .lastNews.radio {
     padding-top: 1rem;
+  }
+
+  .lastNews.radio .container .carousel-item {
+    padding: 0 1rem;
+  }
+
+  .lastNews.radio .container .carousel-item .col {
+    padding: .2rem;
+  }
+
+  .lastNews.radio .container .carousel-item .text-body {
+    font-size: 10px;
+  }
+
+  .lastNews.radio .newImgs .col img {
+    height: 110px; 
   }
 
   .lastNews.radio .newsHeader{
@@ -639,7 +769,11 @@ footer h6 {
   }
 
   #carouselTrending .carousel-item .trendingItem > * {
-    height: 16rem;
+    height: 12rem;
+  }
+
+  .titleCaption h5 {
+    font-size: 15px;
   }
 
   #carouselTrending .carousel-item .carousel-caption h5 {
@@ -652,6 +786,11 @@ footer h6 {
 
   footer h6 {
     font-size: 10px;
+  }
+
+  .radio .social .col-8 {
+    padding: 0;
+    max-width: 70%;
   }
 
   .radioTitle .title {
@@ -667,6 +806,18 @@ footer h6 {
   }
 
   #radioPlayer {
-    padding: 1rem 2rem;
+    padding: 1rem .8rem;
+  }
+
+  .inRadio .controlsRadio {
+    margin-right: .5rem;
+  }
+
+  .col.aside .postTitle {
+    font-size: 18px;
+  }
+
+  .col.aside p {
+    font-size: 12px;
   }
 }
